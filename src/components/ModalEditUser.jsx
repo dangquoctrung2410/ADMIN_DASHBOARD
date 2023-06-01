@@ -9,7 +9,6 @@ import { swictchReaload, handleUserAction } from "../redux/usersSlice";
 import { upDateUser } from "../redux/authSlice";
 
 const ModalEditUser = ({ item }) => {
-    const isReload = useSelector((state) => state.reload.isReload);
     const dispatch = useDispatch();
     const [file, setFile] = useState();
 
@@ -98,10 +97,7 @@ const ModalEditUser = ({ item }) => {
                             src={`${
                                 (item.avatar &&
                                     `http://localhost:8080/image/${item.avatar}`) ||
-                                (file &&
-                                    `http://localhost:8080/image/${URL.createObjectURL(
-                                        file
-                                    )}`)
+                                (file && `${URL.createObjectURL(file)}`)
                             }`}
                             alt=""
                         />

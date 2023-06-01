@@ -15,6 +15,7 @@ import Contacts from "./scenes/contacts/Contacts";
 import ManagerTeam from "./scenes/team/ManagerTeam";
 import Kanban from "./scenes/kanban/Kanban";
 import CardKanban from "./components/CardKanban/CardKanban";
+import VideoPlayer from "./components/ThuatToan/VideoPlayer";
 // import CheckboxInput from "./components/Input";
 
 function Layout() {
@@ -38,7 +39,7 @@ function App() {
 
     return (
         <>
-            <Kanban></Kanban>
+            <VideoPlayer />
         </>
         // <ColorModeContext.Provider value={colorMode}>
         //     <ThemeProvider theme={theme}>
